@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke">
+<parameter name ="username" value="parimala@google.com"></parameter>
+<parameter name ="password" value="Test1234"></parameter>
+
+<listeners>
+       <listener class-name="com.salesforce.listeners.TestListener"></listener>
+</listeners>
+  <test thread-count="1" name="Test">
+    <classes>
+      <class name="com.checkprojecttest.checklogintest"/>
+       <class name="com.checkprojecttest.MYSettingTest"/>
+        <class name="com.checkprojecttest.AccountTest"/>
+         <class name="com.checkprojecttest.OpportunityTest"/>
+          <class name="com.checkprojecttest.LeadTest"/>
+           <class name="com.checkprojecttest.ContactTest"/>
+         <class name="com.checkprojecttest.VerificationTest"/>
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
